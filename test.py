@@ -9,6 +9,20 @@ def check_physical(facts):
         return "R2"
     return None
 
+def check_ip(facts):
+    return None
+
+def check_gateway(facts):
+    return None
+
+def check_dns(facts):
+    return None
+
+def check_port(facts):
+    return None
+
+def check_performance(facts):
+    return None
 
 CHECK_ORDER = [check_physical, check_ip, check_gateway, check_dns, check_port, check_performance]
 def diagnose(facts):
