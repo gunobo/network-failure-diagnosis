@@ -4,7 +4,7 @@ RULES = {
     "R12" : {"cause" : "DNS 서버 미응답", "action" : "서버 재요청"},
 }
 
-def check_dns(facts):
+def check(facts):
     if facts.get("목적지 IP로 ping") == "성공" and facts.get("목적지 도메인으로 ping") == "실패":
         return "R10"
     if facts.get("DNS서버 자체 ping") == "실패":
@@ -12,4 +12,3 @@ def check_dns(facts):
     if facts.get("nslookup/dig 결과") == "응답 없음":
         return "R12"
     return None
-    

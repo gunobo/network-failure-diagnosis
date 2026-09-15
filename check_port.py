@@ -3,7 +3,7 @@ RULES = {
     "R14": {"cause": "방화벽/보안 프로그램 차단", "action": "방화벽/보안앱 예외 설정 확인"},
 }
 
-def check_port(facts):
+def check(facts):
     internet_ok = facts.get("인터넷정상")
     specific_service_fail = facts.get("특정서비스실패")
     site_fail_other_browser = facts.get("타브라우저도실패")

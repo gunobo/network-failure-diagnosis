@@ -12,8 +12,8 @@ IF-THEN 규칙 기반 (R1~R19)
 - check_performance 함수 : 박범호
 """
 
-from check_physical import check_physical
-from check_port import check_port
+import check_physical
+import check_port
 import check_ip
 import check_gateway
 import check_dns
@@ -36,7 +36,7 @@ def diagnose(facts: dict):
     """
     log = []
     for check_func in CHECK_ORDER:
-        log.append(check_func.__module__)
+        log.append(check_func.check)
         rule_id = check_func(facts)
         if rule_id:
             return rule_id, RULES[rule_id], log

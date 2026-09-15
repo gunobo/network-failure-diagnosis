@@ -12,7 +12,7 @@ RULES = {
         "action": "공유기 상태 확인 및 같은 네트워크의 다른 기기에서 비교 테스트",
     },
 }
-def check_perfomance(facts):
+def check(facts):
     if facts.get("연결성공") is True and facts.get("응답느림") is True and facts.get("RTT높음") is True:
         return "R15"
     if facts.get("패킷손실률높음") is True:

@@ -5,7 +5,7 @@ RULES = {
     "R4": {"cause": "케이블 접촉 불량 가능성", "action": "케이블 및 링크 상태 재확인"},
 }
 
-def check_physical(facts):
+def check(facts):
     conn = facts.get("연결표시")
     same_pc_only = facts.get("특정PC만안됨")
     switch_port = facts.get("스위치포트상태")
