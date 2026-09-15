@@ -9,19 +9,19 @@ def check_physical(facts):
         return "R2"
     return None
 
-def check_ip(facts):
+def check_ip(facts): # 여윤우
     return None
 
-def check_gateway(facts):
+def check_gateway(facts): # 박범호
     return None
 
-def check_dns(facts):
+def check_dns(facts): # 김현우
     return None
 
-def check_port(facts):
+def check_port(facts): # 임제민
     return None
 
-def check_performance(facts):
+def check_performance(facts): # 박범호
     return None
 
 CHECK_ORDER = [check_physical, check_ip, check_gateway, check_dns, check_port, check_performance]
