@@ -12,11 +12,11 @@ IF-THEN 규칙 기반 (R1~R19)
 - check_performance 함수 : 박범호
 """
 
-import check_physical
+from check_physical import check_physical
+from check_port import check_port
 import check_ip
 import check_gateway
 import check_dns
-import check_port
 import check_performance
 
 RULES = {
