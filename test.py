@@ -19,10 +19,6 @@ import check_gateway
 import check_dns
 import check_performance
 
-RULES = {
-    "R1": {"cause": "케이블 분리 또는 NIC 문제", "action": "케이블/링크 상태 확인"},
-}
-
 RULES = {}
 RULES.update(check_physical.RULES)
 RULES.update(check_ip.RULES)
